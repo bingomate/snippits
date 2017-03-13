@@ -142,7 +142,7 @@ Strings:
 		end
 
 
-# Looping hashes - Works the same was as iterating arrays except the key&value are stored as variables
+# Looping hashes - Works the same was as iterating arrays except both the key&value are stored as variables
 
 	Example: 
 
