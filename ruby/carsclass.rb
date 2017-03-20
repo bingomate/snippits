@@ -8,18 +8,18 @@ class Vehicle
 		@year = year
 		@milage = milage
 		@service = Hash[
-						:oil_change => 35, 
-						:brake_job => 100, 
-						:trans_service => 100, 
-						:tune_up => 80, 
-						:tire_rotation => 20, 
-						:fuel_service => 75, 
-						:suspension_service => 200
+				:oil_change => 35, 
+				:brake_job => 100, 
+				:trans_service => 100, 
+				:tune_up => 80, 
+				:tire_rotation => 20, 
+				:fuel_service => 75, 
+				:suspension_service => 200
 					]
 		@service_milage = Hash[
-						:plan1 => 'Tire Rotation Air Filter', 
-						:plan2 => 'Tire Rotation Air Filter Transmission Service'
-					]
+				:plan1 => 'Tire Rotation Air Filter', 
+				:plan2 => 'Tire Rotation Air Filter Transmission Service'
+			]
 	end
 	
 	def service_recommend(milage)
