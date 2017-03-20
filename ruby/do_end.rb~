@@ -1,0 +1,12 @@
+#Block passed in single line
+addition = lambda {|a, b| a + b}
+puts addition.call(5,5)
+
+#Block passed in multiple lines
+
+addition = labmda {|a,b|
+a + b 
+}
+puts addition.call(5,5)
+
+#
