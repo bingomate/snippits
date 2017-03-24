@@ -17,7 +17,7 @@ def main_menu
 	puts "1: Create a New account"
 	puts "2: Deposit money into your account"
 	puts "3: Withdraw money from your account"
-	puts "4: Change your pin"
+	
 
 	option = gets.chomp
 
@@ -28,8 +28,6 @@ def main_menu
 		deposit
 	when "3"
 		withdraw
-	when "4"
-		change_pin
 	else
 		puts "That wasn't a valid choice"
 	end
