@@ -1,0 +1,62 @@
+<%= flash[:notice] %>
+<table>
+	<thead>
+		<tr>
+			<th>Call Start</th>
+			<th>Call Duration</th>
+		 	<th>Ring Duration</th>
+			<th>Caller</th>
+		    <th>Call Direction</th>
+		    <th>Called Number</th>
+		 	<th>Dialed Number</th>
+			<th>Account</th>
+			<th>Is Internal</th>
+			<th>Call Id</th>
+			<th>Continuation</th>
+			<th>Party 1 Device</th>
+			<th>Rarty 1 Name</th>
+		 	<th>Party 2 Device</th>
+			<th>Party 2 Name</th>
+			<th>Hold Time</th>
+			<th>Park Time</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @reports.each do |report| %>
+			<tr>
+				<td><%= report.call_start %></td>
+				<td><%= report.call_duration %></td>
+				<td><%= report.ring_duration %></td>
+				<td><%= report.caller %></td>
+				<td><%= report.call_direction %></td>
+				<td><%= report.called_number %></td>
+				<td><%= report.dialed_number %></td>
+				<td><%= report.account %></td>
+				<td><%= report.is_internal %></td>
+				<td><%= report.call_id %></td>
+				<td><%= report.continuation %></td>
+				<td><%= report.party_1_device %></td>
+				<td><%= report.party_1_name %></td>
+				<td><%= report.party_2_device %></td>
+				<td><%= report.party_2_name %></td>
+				<td><%= report.hold_time %></td>
+				<td><%= report.park_time %></td>
+			</tr>
+		<% end %>
+	</tbody>
+		
+</table>
+
+<div>
+	<h4>Import the csv</h4>
+	<%= form_tag import_reports_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Import CSV" %>
+	<% end %>
+</div>
+
+
+
+
+
+ 
