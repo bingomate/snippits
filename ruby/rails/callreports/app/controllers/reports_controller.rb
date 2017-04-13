@@ -9,4 +9,7 @@ class ReportsController < ApplicationController
 		redirect_to root_url, notice: "CSV Imported"
 	end
 	
+	def new
+	end
+	
 end
