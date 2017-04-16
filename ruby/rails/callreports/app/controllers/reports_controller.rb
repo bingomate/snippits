@@ -25,5 +25,31 @@ class ReportsController < ApplicationController
 		@incount = Report.where("call_direction = 'I'").count
 	end
 	
+			  
+	
 	
 end
+
+/*
+Need the ability to mirror how chronicall works in call reporting
+
+1. Standard reports including
+	*Inbound calls to user
+	*Inbound calls to group (by user ?)
+		Contains:
+			Total calls
+			Number of calls answered
+			Percentage of calls answered
+			Number of calls to voicemail
+			Percentage of calls to voicemail
+			User who answered
+			Total answer time
+			Average answer time
+			Total hold time
+			Average hold time
+			
+2. Automatic report builder for weekly reports
+	
+*/
+
+
