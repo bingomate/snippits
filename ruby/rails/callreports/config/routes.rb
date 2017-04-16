@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   
 
-  resources :reports do
-  collection { post :import }
-  collection { post :delete }
- end
-
-get "run" , to: "reports#run"
-get "outbound", to: "reports#outbound"
-get "inbound", to: "reports#inbound"
+resources :reports, :except => [:create, :new, :edit, :show, :update, :destroy] do
+   collection { post :import }
+   collection { post :delete }
+   collection { get  :run }
+   collection { get  :outbound }
+   collection { get  :inbound }
+   collection { get  :inboundtogroup }
+end
 
 
 	root to: "reports#index"
