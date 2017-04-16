@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20170408201750) do
 
   create_table "reports", force: :cascade do |t|
     t.datetime "call_start"
-    t.integer  "call_duration"
+    t.string   "call_duration"
     t.integer  "ring_duration"
     t.string   "caller"
     t.string   "call_direction"

@@ -1,17 +1,21 @@
 <%= flash[:notice] %>
-
 <div>
 	<h4>Import the csv</h4>
 	<%= form_tag import_reports_path, multipart: true do %>
 		<%= file_field_tag :file %>
 		<%= submit_tag "Import CSV" %>
 	<% end %>
+	
+	<h4> Delete ALL data </h4>
+	<%= form_tag delete_reports_path %>
+	<%= submit_tag "Delete" %>
+	
 </div>
 </br>
 <%= link_to "Run Reports", new_report_path %>
 
 
-<table>
+<table class ="table table-striped">
 	<thead>
 		<tr>
 			<th>Call Start</th>
@@ -58,10 +62,3 @@
 	</tbody>
 		
 </table>
-
-
-
-
-
-
- 

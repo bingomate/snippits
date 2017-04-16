@@ -1,0 +1,52 @@
+<h3>Incoming Call Summary</h3>
+<p><%= @incount %> incoming calls</p>
+
+<table class ="table table-striped">
+	<thead>
+		<tr>
+			<th>Call Start</th>
+			<th>Call Duration</th>
+		 	<th>Ring Duration</th>
+			<th>Caller</th>
+		    <th>Call Direction</th>
+		    <th>Called Number</th>
+		 	<th>Dialed Number</th>
+			<th>Account</th>
+			<th>Is Internal</th>
+			<th>Call Id</th>
+			<th>Continuation</th>
+			<th>Party 1 Device</th>
+			<th>Rarty 1 Name</th>
+		 	<th>Party 2 Device</th>
+			<th>Party 2 Name</th>
+			<th>Hold Time</th>
+			<th>Park Time</th>
+		</tr>
+	</thead>
+	<tbody>
+			<% @in.each do |incoming| %>
+			<tr>
+				<td><%= incoming.call_start %></td>
+				<td><%= incoming.call_duration %></td>
+				<td><%= incoming.ring_duration %></td>
+				<td><%= incoming.caller %></td>
+				<td><%= incoming.call_direction %></td>
+				<td><%= incoming.called_number %></td>
+				<td><%= incoming.dialed_number %></td>
+				<td><%= incoming.account %></td>
+				<td><%= incoming.is_internal %></td>
+				<td><%= incoming.call_id %></td>
+				<td><%= incoming.continuation %></td>
+				<td><%= incoming.party_1_device %></td>
+				<td><%= incoming.party_1_name %></td>
+				<td><%= incoming.party_2_device %></td>
+				<td><%= incoming.party_2_name %></td>
+				<td><%= incoming.hold_time %></td>
+				<td><%= incoming.park_time %></td>
+			</tr>
+			<% end %>
+				
+	</tbody>
+		
+		
+</table>

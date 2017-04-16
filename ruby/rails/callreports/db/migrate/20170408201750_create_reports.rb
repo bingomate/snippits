@@ -3,7 +3,7 @@ class CreateReports < ActiveRecord::Migration[5.0]
     create_table :reports do |t|
     
 	  t.datetime		:call_start
-	  t.integer			:call_duration
+	  t.string			:call_duration
 	  t.integer		 	:ring_duration
 	  t.string			:caller
 	  t.string		    :call_direction
