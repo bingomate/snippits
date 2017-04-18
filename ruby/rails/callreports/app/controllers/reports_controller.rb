@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+	
 
 	def index
 		@reports = Report.all
@@ -15,7 +16,6 @@ class ReportsController < ApplicationController
 	end
 	
 	def outbound
-		#@test = Report.find(2)
 		@out = Report.where("call_direction = 'O'")
 		@outcount = Report.where("call_direction = 'O'").count
 	end
@@ -25,31 +25,24 @@ class ReportsController < ApplicationController
 		@incount = Report.where("call_direction = 'I'").count
 	end
 	
+	def inboundtogroup
+		@brokername = Report.where("called_number = '8662' AND party_1_name = 'Brokers'")
+		@brokerdir = Report.where("call_direction = 'I'")
+		@brokertotal = @brokername + @brokerdir
+	end
+	
+	def filter
+		respond_to do |format|
+			format.html
+			format.json
+		end
+	
+	end
+	
 			  
 	
 	
 end
 
-/*
-Need the ability to mirror how chronicall works in call reporting
-
-1. Standard reports including
-	*Inbound calls to user
-	*Inbound calls to group (by user ?)
-		Contains:
-			Total calls
-			Number of calls answered
-			Percentage of calls answered
-			Number of calls to voicemail
-			Percentage of calls to voicemail
-			User who answered
-			Total answer time
-			Average answer time
-			Total hold time
-			Average hold time
-			
-2. Automatic report builder for weekly reports
-	
-*/
 
 

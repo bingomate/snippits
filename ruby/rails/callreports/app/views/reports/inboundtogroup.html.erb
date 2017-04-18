@@ -1,0 +1,49 @@
+<h3>Incoming Group Summary</h3>
+
+<table class ="table table-striped">
+	<thead>
+		<tr>
+			<th>Call Start</th>
+			<th>Call Duration</th>
+		 	<th>Ring Duration</th>
+			<th>Caller</th>
+		    <th>Call Direction</th>
+		    <th>Called Number</th>
+		 	<th>Dialed Number</th>
+			<th>Account</th>
+			<th>Is Internal</th>
+			<th>Call Id</th>
+			<th>Continuation</th>
+			<th>Party 1 Device</th>
+			<th>Rarty 1 Name</th>
+		 	<th>Party 2 Device</th>
+			<th>Party 2 Name</th>
+			<th>Hold Time</th>
+			<th>Park Time</th>
+		</tr>
+	</thead>
+
+<tbody>
+		<% @brokertotal.each do |broker| %>
+			<tr>
+				<td><%= broker.call_start %></td>
+				<td><%= broker.call_duration %></td>
+				<td><%= broker.ring_duration %></td>
+				<td><%= broker.caller %></td>
+				<td><%= broker.call_direction %></td>
+				<td><%= broker.called_number %></td>
+				<td><%= broker.dialed_number %></td>
+				<td><%= broker.account %></td>
+				<td><%= broker.is_internal %></td>
+				<td><%= broker.call_id %></td>
+				<td><%= broker.continuation %></td>
+				<td><%= broker.party_1_device %></td>
+				<td><%= broker.party_1_name %></td>
+				<td><%= broker.party_2_device %></td>
+				<td><%= broker.party_2_name %></td>
+				<td><%= broker.hold_time %></td>
+				<td><%= broker.park_time %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -5,20 +5,20 @@
 </div>
 
 
-	<div class="row content>
-		<div class="col-sm-4 sidenav-left">
-			<ul style="list-style-type:none">
-				<li><p><%= link_to "Inbound Call Summary", inbound_reports_path %></p></li>
-				<li><p><%= link_to "Outbound Call Summary", outbound_reports_path %></p></li>
-				<li><p><%= link_to "Outbound Calls by Extension", outbound_reports_path %></p></li>
-				<li><p><%= link_to "Inbound Summary to Extension", outbound_reports_path %></p></li>
-				<li><p><%= link_to "Inbound Summary to Group", outbound_reports_path %></p></li>
-
-
-
-			</ul>
-
-			
-		</div>
+<div class="row content>
+	<div class="col-sm-4 sidenav-left">
+		<ul style="list-style-type:none">
+		
+			<div id="filter"><li><p><%= link_to "Inbound Call Summary", inbound_reports_path , class: "btn btn-primary"%></p></li></div>
+			<div id="filter"><li><p><%= link_to "Outbound Call Summary", outbound_reports_path, class: "btn btn-primary" %></p></li></div>
+			<li><p><%= link_to "Outbound Calls by Extension", outbound_reports_path %></p></li>
+			<li><p><%= link_to "Inbound Summary to Extension", outbound_reports_path %></p></li>
+			<li><p><%= link_to "Inbound Summary to Group", outbound_reports_path %></p></li>
+		</ul>
 	</div>
+</div>
+
+
+
+
 
