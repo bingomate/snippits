@@ -1,5 +1,14 @@
 <h3>Incoming Group Summary</h3>
 
+<b>Total Calls: </b> 
+<span><%= @total %></span>
+</br>
+<b> Total Talking Time</b>
+<span><%= @totaltalk %></span>
+</br>
+<b> Total Ring Time</b>
+<span><%= @totalring %></span>
+
 <table class ="table table-striped">
 	<thead>
 		<tr>
@@ -23,8 +32,8 @@
 		</tr>
 	</thead>
 
-<tbody>
-		<% @brokertotal.each do |broker| %>
+	<tbody>
+		<% @brokers.each do |broker| %>
 			<tr>
 				<td><%= broker.call_start %></td>
 				<td><%= broker.call_duration %></td>
@@ -45,5 +54,5 @@
 				<td><%= broker.park_time %></td>
 			</tr>
 		<% end %>
-	</tbody>
+	</tbody> 
 </table>

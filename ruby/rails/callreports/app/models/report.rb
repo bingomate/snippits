@@ -6,5 +6,7 @@ class Report < ApplicationRecord
 		CSV.foreach(file.path, headers: true) do |row|
 			Report.create!(Hash[row])
 			end
-		end
+	end
+	
+	
 end

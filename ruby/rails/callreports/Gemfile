@@ -36,7 +36,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # sprockets-rails
 gem 'sprockets-rails', '~> 3.2' 
 # auto-prefixer
-gem 'autoprefixer-rails', '~> 6.0.3'
+gem 'autoprefixer-rails', '~> 6.7.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

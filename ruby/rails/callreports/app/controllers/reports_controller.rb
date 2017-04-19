@@ -26,18 +26,19 @@ class ReportsController < ApplicationController
 	end
 	
 	def inboundtogroup
-		@brokername = Report.where("called_number = '8662' AND party_1_name = 'Brokers'")
-		@brokerdir = Report.where("call_direction = 'I'")
-		@brokertotal = @brokername + @brokerdir
+		@brokers = Report.where("called_number = '8662'")
+		.or(Report.where("party_1_name = 'Brokers'"))
+		.where("call_direction = 'I'")
+		
+		@total = @brokers.count
+		@totaltalk = @brokers.sum(:call_duration)
+		@totalring = @brokers.sum(:ring_duration)
+		
 	end
 	
-	def filter
-		respond_to do |format|
-			format.html
-			format.json
-		end
 	
-	end
+	
+	
 	
 			  
 	
