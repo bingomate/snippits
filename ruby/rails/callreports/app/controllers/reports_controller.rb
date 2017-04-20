@@ -31,7 +31,18 @@ class ReportsController < ApplicationController
 		.where("call_direction = 'I'")
 		
 		@total = @brokers.count
-		@totaltalk = @brokers.sum(:call_duration)
+		@duration = @brokers.map {|i| i.call_duration} 
+		
+		sum = 0
+		for x in @duration do
+		x.gsub! ':', ''
+		end
+		for x in 0..@duration.length do
+				sum += @duration[x].to_i
+		end
+		
+		@calltotals = sum * 0.6 / 60
+				
 		@totalring = @brokers.sum(:ring_duration)
 		
 	end
