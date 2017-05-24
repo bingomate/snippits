@@ -7,8 +7,8 @@ def get_middle(name)
     else
       puts "The middle letter of #{name} is #{namearr[result]}"
     end
-
-
 end
 
+
+#name = ARGV
 get_middle('justini')
