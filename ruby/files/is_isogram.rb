@@ -1,3 +1,5 @@
 def is_isogram(string)
-  stringarr = string.split(//)
+  string.downcase.chars.uniq == string.downcase.chars
 end
+
+is_isogram("banana")
