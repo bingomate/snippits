@@ -1,0 +1,13 @@
+<h1>Add Camera</h1>
+
+<%= form_for(@camera) do |f| %>
+
+<p><%= f.label :DisplayName %></br>
+<p><%= f.text_field :DisplayName %>
+
+<p><%= f.label :NetworkAddress %></br><p>
+<p><%= f.text_field :NetworkAddress %><p>
+
+<p><%= f.submit %></p>
+
+<% end %>
