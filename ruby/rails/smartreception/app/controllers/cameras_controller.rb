@@ -1,8 +1,10 @@
-class CameraController < ApplicationController
+class CamerasController < ApplicationController
+
   def index
   end
 
   def new
+
   end
 
   def create
@@ -13,7 +15,6 @@ class CameraController < ApplicationController
 
   private
   	def camera_params
-  		params.permit(:DisplayName, :NetworkAddress)
+  		params.require(:camera).permit(:DisplayName, :NetworkAddress)
   	end
-
 end

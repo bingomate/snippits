@@ -1,6 +1,6 @@
 <h1>Add Camera</h1>
 
-<%= form_for(@camera) do |f| %>
+<%= form_for :camera, url: cameras_path do |f| %>
 
 <p><%= f.label :DisplayName %></br>
 <p><%= f.text_field :DisplayName %>
