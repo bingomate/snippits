@@ -1,6 +1,7 @@
 class CamerasController < ApplicationController
 
   def index
+      @cameras = Camera.all
   end
 
   def new
@@ -12,9 +13,13 @@ class CamerasController < ApplicationController
     @camera.save
   end
 
+  def show
+    #@camera = Camera.find(params[:id])
+  end
+
 
   private
   	def camera_params
-  		params.require(:camera).permit(:DisplayName, :NetworkAddress)
+  		params.require(:camera).permit(:DisplayName, :NetworkAddress, :Port, :Username, :Password, :SkypeUsername)
   	end
 end
