@@ -19,11 +19,5 @@
     <center><video id="localVideo" height="200" width="200" muted="muted"></video></center>
 </div>
 
-<script>
-  $(document).ready(function() {
-
-    // Initialize the plugin
-    $('#fadeandscale').popup({transition: 'all 0.8s'});
-  })
-
-</script>
+<%= javascript_include_tag("sip-0.7.2.min") %>
+<%= javascript_include_tag("call") %>

@@ -37,8 +37,8 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  #config.force_ssl = true
-  #config.ssl_port = 3001
+  config.force_ssl = true
+  config.ssl_port = 3001
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

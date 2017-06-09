@@ -60,7 +60,7 @@ endButton.addEventListener("click", function () {
 
 var startButton = document.getElementById('startCall');
 startButton.addEventListener("click", function () {
-       session = userAgent.invite('sip:jbrevik1@hsmove.onsip.com', options);
+       session = userAgent.invite('sip:jlbrevik@hsmove.onsip.com', options);
        alert("Call Started");
 }, false);
 
@@ -80,3 +80,10 @@ var options = {
         }
     }
 };
+
+
+$(document).ready(function() {
+
+  // Initialize the plugin
+  $('#fadeandscale').popup({transition: 'all 0.8s'});
+})

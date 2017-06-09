@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require call
+//= require_tree ./jquery-popup-overlay-gh-pages
