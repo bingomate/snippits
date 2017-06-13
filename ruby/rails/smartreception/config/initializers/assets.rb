@@ -4,6 +4,7 @@
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( sip-0.7.2.min.js )
 Rails.application.config.assets.precompile += %w( call.js )
+Rails.application.config.assets.precompile += %w( keycard.js )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
