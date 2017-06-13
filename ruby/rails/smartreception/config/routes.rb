@@ -5,12 +5,16 @@ Rails.application.routes.draw do
 
   root 'cameras#index'
 
+  get 'cameras/client' => 'cameras#client'
+
   namespace :api, defaults: {format: :json} do
 
     namespace :v1 do
 
       get 'unlock_door/:door_id' => 'doors#unlock_door'
+      get 'lock_door/:door_id' => 'doors#lock_door'
     end
+
 end
 
 

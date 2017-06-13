@@ -6,9 +6,10 @@
                      <button id="startCall" class="fadeandscale_open"><%= image_tag "call.png", size: "40" %></button>
                      <button id="endCall"><%= image_tag "hangup.png", size: "40" %></button>
                      <button type="submit"><%= image_tag "search.png", size: "40" %></button>
-                     <button type="submit"><%= image_tag "settings.png", size: "40" %></button>
-                     <img src="" width="100" height="40" alt="">
-                     <button id="lockButton" value = "70" ><%= image_tag "door.png", size: "40"  %></button>
+                     <button id="camera_settings"><%= image_tag "settings.png", size: "40" %></button>
+                     <!-- <img src="" width="100" height="40" alt=""> -->
+                     <button id="lockButton" value = "<%= cams.Door2_Id %>" alt="Lock Door" ><%= image_tag "door.png", size: "40"  %></button>
+                     <button id="UnlockButton" value = "<%= cams.Door2_Id %>" alt="Unlock Door" ><%= image_tag "door.png", size: "40"  %></button>
                   </div>
         </div>
 
