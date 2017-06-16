@@ -1,7 +1,8 @@
 
 <% @cameras.each do |cams| %>
         <div class="cameraCanvas">
-            <img src="http://<%= cams.NetworkAddress %>:<%= cams.Port %>/snapshot.cgi?user=<%= cams.Username %>&pwd=<%= cams.Password %>&t=" onload='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 1000)' onerror='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 5000)' height="200" width="400" alt='' />
+            <!-- <img id="motion" src="http://<%= cams.NetworkAddress %>:<%= cams.Port %>/snapshot.cgi?user=<%= cams.Username %>&pwd=<%= cams.Password %>&t=" onload='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 1000)' onerror='setTimeout(function() {src = src.substring(0, (src.lastIndexOf("t=")+2))+(new Date()).getTime()}, 5000)' height="200" width="400" alt='' /> -->
+            <img src="http://<%= cams.NetworkAddress %>:<%= cams.Port %>/videostream.cgi?user=<%= cams.Username %>&pwd=<%= cams.Password %>" height="200" width="400" />
                 <div class="cameraArea-left">
                      <button id="startCall" class="fadeandscale_open"><%= image_tag "call.png", size: "40" %></button>
                      <button id="endCall"><%= image_tag "hangup.png", size: "40" %></button>
@@ -13,13 +14,15 @@
                   </div>
         </div>
 
+
 <% end %>
 
 <div id="fadeandscale">
     <center><video id="remoteVideo" height="600" width="800"></video></center>
-    <center><video id="localVideo" height="200" width="200" muted="muted"></video></center>
+    <center><video id="localVideo" height="200" width="200"></video></center>
 </div>
 
 <%= javascript_include_tag("sip-0.7.2.min") %>
 <%= javascript_include_tag("call") %>
 <%= javascript_include_tag("keycard") %>
+<%= javascript_include_tag("motion") %>
